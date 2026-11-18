@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Freshers Party 2K26</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #18002e, #650b85, #e52e71);
+    color: white;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+}
+
+.header {
+    padding: 30px 15px;
+}
+
+.emoji {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 17px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    color: #ffe082;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.header p {
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+.date {
+    color: #ffe082;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.form-box {
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 30px 22px;
+    text-align: left;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+}
+
+.form-box h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #ffe082;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    background: white;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #ffe082;
+    color: #321044;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffd45c;
+}
+
+#message {
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <div class="emoji">🎉 ✨ 🎊</div>
+
+        <h2>USHA COLLEGE OF NURSING AND PHARMACY</h2>
+
+        <h1>FRESHER'S PARTY 2K26</h1>
+
+        <p>
+            A new beginning, new friendships
+            and unforgettable memories!
+        </p>
+
+        <div class="date">
+            📅 20 November 2026
+        </div>
+
+        <p>
+            📍 Usha College of Nursing and Pharmacy
+        </p>
+
+    </div>
+
+    <div class="form-box">
+
+        <h2>📝 Student Registration</h2>
+
+        <form id="registrationForm">
+
+            <label for="studentName">Student Name</label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="course">Course / Department</label>
+
+            <select id="course" required>
+                <option value="">Select your course</option>
+                <option value="B.Pharmacy">B.Pharmacy</option>
+                <option value="D.Pharmacy">D.Pharmacy</option>
+                <option value="B.Sc Nursing">B.Sc Nursing</option>
+                <option value="GNM">GNM</option>
+                <option value="ANM">ANM</option>
+            </select>
+
+            <label for="food">Food Preference</label>
+
+            <select id="food" required>
+                <option value="">Select food preference</option>
+                <option value="Veg">Veg</option>
+                <option value="Non-Veg">Non-Veg</option>
+            </select>
+
+            <button type="submit">
+                SUBMIT REGISTRATION
+            </button>
+
+        </form>
+
+        <div id="message"></div>
+
+<div id="invitationButton" style="display:none; margin-top:20px;">
+    <a href="invitation.html" 
+       style="display:inline-block; background:#ffb52e; 
+       color:#17245c; padding:14px 25px; 
+       text-decoration:none; border-radius:8px; 
+       font-weight:bold;">
+        SHOW THE INVITATION
+    </a>
+</div>
+
+    </div>
+
+    <div class="footer">
+        Made with ❤️ for Fresher's Party 2K26
+    </div>
+
+</div>
+
+<script>
+document.getElementById("registrationForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("studentName").value;
+    const course = document.getElementById("course").value;
+    const food = document.getElementById("food").value;
+
+    
+document.getElementById("message").innerHTML =
+    "🎉 Thank You, " + name + "!<br>" +
+    "Your details have been entered successfully.<br>"
+
+document.getElementById("invitationButton").style.display = "block";
+
+
+});
+</script>
+</body>
+</html>
